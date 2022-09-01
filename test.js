@@ -1,16 +1,18 @@
-const myNoun = "dog";
-const myAdjective = "big";
-const myVerb = "ran";
-const myAdverb = "quickly";
+// let obj = {
+//   a: 1,
+//   b: {
+//     c: 2,
+//   },
+// };
 
-// Only change code below this line
-const wordBlanks =
-  "I have a " +
-  myNoun +
-  " .That is " +
-  myAdjective +
-  ".It " +
-  myVerb +
-  "s and " +
-  myAdverb;
-console.log(wordBlanks);
+// let newObj = JSON.parse(JSON.stringify(obj));
+// console.log(newObj);
+// obj.b.c = 20;
+// // console.log(obj); // { a: 1, b: { c: 20 } }
+// // console.log(newObj); // { a: 1, b: { c: 2 } } (New Object Intact!)
+
+let x = {
+  a: 2,
+  b: "mahdi",
+};
+console.log(JSON.stringify(x));
