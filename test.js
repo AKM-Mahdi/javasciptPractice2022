@@ -1,18 +1,27 @@
-// let obj = {
-//   a: 1,
-//   b: {
-//     c: 2,
-//   },
+// //given an array of numbers and a number as a parameter, you have to return the pair elements within array whose sum is equal to the given number
+
+// let logic = (arr, sum) => {
+//   let returnum = [];
+//   let results = [];
+//   // console.log(returnum);
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (returnum[arr[i]]) {
+//       // console.log(returnum[arr[i]]);
+//       results.push([returnum[arr[i]], arr[i]]);
+//     } else {
+//       returnum[sum - arr[i]] = arr[i];
+//     }
+//   }
+//   return results;
 // };
 
-// let newObj = JSON.parse(JSON.stringify(obj));
-// console.log(newObj);
-// obj.b.c = 20;
-// // console.log(obj); // { a: 1, b: { c: 20 } }
-// // console.log(newObj); // { a: 1, b: { c: 2 } } (New Object Intact!)
+// console.log(logic([50, 5, 3, 1], 51));
 
-let x = {
-  a: 2,
-  b: "mahdi",
-};
-console.log(JSON.stringify(x));
+// function isLess(a, b) {
+//   // Only change code below this line
+//   console.log(a < b);
+//   // Only change code above this line
+// }
+
+// isLess(10, 15);
