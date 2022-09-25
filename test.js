@@ -1,9 +1,9 @@
-const person1 = {
-  fname: "mahdi",
-  lname: " A K M",
-  fullName: function () {
-    return this.fname + this.lname;
-  },
-};
+function squareSum(numbers) {
+  var result = 0;
+  for (var i in numbers) {
+    result = result + numbers[i] * numbers[i];
+  }
+  return result;
+}
 
-console.log(person1.fullName("a"));
+console.log(squareSum([1, 2, 2]));
