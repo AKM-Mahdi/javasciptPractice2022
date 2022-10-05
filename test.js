@@ -15,27 +15,33 @@
 
 // console.log("after");
 
-console.log("before");
-getUser(1, function (user) {
-  console.log(user);
-  getRepo();
-  console.log("get repo fetching");
-});
+// console.log("before");
+// getUser(1, function (user) {
+//   console.log(user);
+//   getRepo();
+//   console.log("get repo fetching");
+// });
 
-function getUser(id, callback) {
-  setTimeout(() => {
-    console.log("getting data from api");
-    const data = {
-      id: id,
-      getUserName: "Mahdi",
-    };
-    callback(data);
-  }, 2000);
-}
-console.log("after");
+// function getUser(id, callback) {
+//   setTimeout(() => {
+//     console.log("getting data from api");
+//     const data = {
+//       id: id,
+//       getUserName: "Mahdi",
+//     };
+//     callback(data);
+//   }, 2000);
+// }
+// console.log("after");
 
-function getRepo() {
-  setTimeout(() => {
-    console.log(["repo 1", "repo 2"]);
-  }, 5000);
-}
+// function getRepo() {
+//   setTimeout(() => {
+//     console.log(["repo 1", "repo 2"]);
+//   }, 5000);
+// }
+
+const sum = (a, b) => {
+  console.log(a + b);
+};
+
+sum();
