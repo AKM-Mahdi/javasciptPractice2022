@@ -24,7 +24,7 @@ function getCustomer() {
       resolve({
         id: 1,
         name: "Iqbal",
-        isPremium: true,
+        isPremium: false,
         email: "akmmahdi115555@gmail.com",
       });
     });

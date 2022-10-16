@@ -12,14 +12,21 @@ async function getCustomers() {
   const customer = await getCustomer();
   console.log("Cheking Customer memebership...");
 
-  if (customer.isPremium == true) {
-    const getMovies = await getTopMovies(customer);
-    console.log(
-      `${customer.name} has premium memebership. Top Movie List : ${getMovies}`
-    );
-    const customerEmail = await sendEmail(customer.email);
-    console.log(`Ticket has been send to this email : ${customerEmail}`);
-  }
+  // if (customer.isPremium == true) {
+  //   const getMovies = await getTopMovies(customer);
+  //   console.log(
+  //     `${customer.name} has premium memebership. Top Movie List : ${getMovies}`
+  //   );
+  //   const customerEmail = await sendEmail(customer.email);
+  //   console.log(`Ticket has been send to this email : ${customerEmail}`);
+  // }
+
+  const getMovies = await getTopMovies(customer);
+  console.log(
+    `${customer.name} has premium memebership. Top Movie List : ${getMovies}`
+  );
+  const customerEmail = await sendEmail(customer.email);
+  console.log(`Ticket has been send to this email : ${customerEmail}`);
 }
 getCustomers();
 
