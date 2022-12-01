@@ -1,47 +1,32 @@
-// function squareSum(numbers) {
-//   var result = 0;
-//   for (var i in numbers) {
-//     result = result + numbers[i] * numbers[i];
-//   }
-//   return result;
-// }
+getCustomer(1, (customer) => {
+  console.log("customer: ", customer);
+  if (customer.isPremium) {
+    console.log("Top Movies: ", movies);
+    sendEmail(customer.email, movies, () => {
+      console.log("Email sent...");
+    });
+  }
+});
 
-// console.log(squareSum([1, 2, 2]));
+function getCustomer(id, callback) {
+  setTimeout(() => {
+    callback({
+      id: 1,
+      name: "Iqbal",
+      isPremium: true,
+      email: "email",
+    });
+  }, 4000);
+}
 
-// console.log("before");
-// setTimeout(() => {
-//   console.log("inside...");
-// }, 2000);
+function getTopMovies(callback) {
+  setTimeout(() => {
+    callback(["movie1", "movie2"]);
+  }, 3000);
+}
 
-// console.log("after");
-
-// console.log("before");
-// getUser(1, function (user) {
-//   console.log(user);
-//   getRepo();
-//   console.log("get repo fetching");
-// });
-
-// function getUser(id, callback) {
-//   setTimeout(() => {
-//     console.log("getting data from api");
-//     const data = {
-//       id: id,
-//       getUserName: "Mahdi",
-//     };
-//     callback(data);
-//   }, 2000);
-// }
-// console.log("after");
-
-// function getRepo() {
-//   setTimeout(() => {
-//     console.log(["repo 1", "repo 2"]);
-//   }, 5000);
-// }
-
-const sum = (a, b) => {
-  console.log(a + b);
-};
-
-sum();
+function sendEmail(email, movies, callback) {
+  setTimeout(() => {
+    callback();
+  });
+}
