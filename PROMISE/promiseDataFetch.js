@@ -10,6 +10,7 @@ function getUser(id) {
     }, 1000);
   });
 }
+
 function getUserName(userName) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
